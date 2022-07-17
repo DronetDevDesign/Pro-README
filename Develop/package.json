@@ -1,0 +1,22 @@
+{
+  "name": "pro-readme",
+  "version": "1.0.0",
+  "description": "A command line application that helps the user create a professional README.md file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DronetDevDesign/Pro-README.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DronetDevDesign/Pro-README/issues"
+  },
+  "homepage": "https://github.com/DronetDevDesign/Pro-README#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
