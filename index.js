@@ -1,18 +1,21 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
-const generateReadmePage = ("./src/generateMarkdown.js");
+const fs = require("fs");
+const { writeFile } = require('node:fs/promises');
+// const generateMarkdown = require("./src/generateMarkdown");
+const generateReadmeMarkdown = require("./src/generateMarkdown.js");
+
 // *** TODO: Create an array of questions for user input
-const questions = () => {
-  return inquirer.prompt([
+const questions = [
     {
       type: "input",
-      name: "projectTitle",
+      name: "title",
       message: "What is the title of your project? (Required)",
       validate: (titleInput) => {
         if (titleInput) {
           return true;  
         } else {
-          console.log("Please enter a project title!");
+          console.log("Please enter the title of your project!");
           return false;
         }
       },
@@ -25,107 +28,101 @@ const questions = () => {
         if (descriptionInput) {
           return true;  
         } else {
-          console.log("Please enter a description for the project!");
+          console.log("Please enter a short description for the project!");
           return false;
         }
       },
     },
     {
       type: "input",
-      name: "motivation",
-      message: "What was your motivation? (Optional)",
-    },
-    {
-      type: "input",
-      name: "reason",
-      message: "Why did you build this project? (Optional)" 
-    },
-    {
-      type: "input",
-      name: "solution",
-      message: "What problem does it solve? (Optional)"
-    },
-    {
-      type: "input",
-      name: "learned",
-      message: "What did you learn from this project? (Optional)" 
+      name: "username",
+      message: "What is your gitHub username? (Required)",
+      validate: (usernameInput) => {
+        if (usernameInput) {
+          return true;  
+        } else {
+          console.log("Please enter a gitHub username!");
+          return false;
+        }
+      },
     },
     {
       type: "input",
       name: "link",
-      message: "Enter the gitHub link to your project. (Required)",
+      message: "What is your gitHub repository link? (Required)",
       validate: (linkInput) => {
         if (linkInput) {
           return true;  
         } else {
-          console.log("You need to enter a project gitHub link!"),
+          console.log("Please enter a gitHub repository link!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is your email address? (Required)",
+      validate: (emailInput) => {
+        if (emailInput) {
+          return true;  
+        } else {
+          console.log("Please enter your email address!");
           return false;
         }
       },
     },
     {
       type: "checkbox",
-      name: "languages",
-      message: "What languages were used to build this project? (check all that apply)",
+      name: "license",
+      message: "What type of license should your project have? (check all that apply)",
       choices: [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "ES6",
-        "jQuery",
-        "NodeJS",
+        "MIT", // https://img.shields.io/badge/license-MIT-brightgreen
+        "Apache", // https://img.shields.io/badge/license-Apache-blue
+        "GPL", // https://img.shields.io/badge/license-GPL-blue
+        "JavaScript", // https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg
+        "macOS", // https://svgshare.com/i/ZjP.svg
+        "git", // https://badgen.net/badge/icon/git?icon=git&label
       ],
     },
     {
       type: "input",
       name: "installation",
-      message: "What are the steps required to install your project?"
+      message: "What command should be run to install dependencies?"
+    },
+    {
+      type: "input",
+      name: "test",
+      message: "What command should be run to run tests?"
     },
     {
       type: "input",
       name: "usage",
-      message: "Provide instructions and examples for use. Include screenshots as needed."
-    },
-    {
-      type: "input",
-      name: "credits",
-      message: "List any collaborators, if any with links to their gitHub profiles."
-    },
-    {
-      type: "input",
-      name: "license",
-      message: "What type of license does your project have?"
-    },
-    {
-      type: "input",
-      name: "badges",
-      message: "What badges would you like to include in your README?"
-    },
-    {
-      type: "input",
-      name: "features",
-      message: "What features does your project have?"  
-    },
-    {
-      type: "confirm",
-      name: "confirmContribute",
-      message: "Would you like others to contribute to this project?",
-      default: true;  
+      message: "What does the user need to know about using the repository?"
     },
     {
       type: "input",
       name: "contribute",
-      message: "Guidelines for other developers on how to contribute:",
-      when: ({ confirmContribute }) => confirmContribute,
-    },
-  ]);
-};
+      message: "What does the user need to know about contributing to the repository?"
+    }
+  ];
+
+inquirer.prompt(questions)
+.then((answers) => {
+  console.log(answers);
+  // writeFile(answers);
+});
+
 
 // *** TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  writeFile('./Pro-README.md', JSON.stringify(data));
+}
 
 // *** TODO: Create a function to initialize app
-function init() {}
+function init() {
+  return generateReadmeMarkdown;
+}
 
 
 // *** Function call to initialize app
