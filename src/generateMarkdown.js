@@ -16,27 +16,37 @@ function generateMarkdown(data) {
   const { title, projectDescription, installation, usage, contribute, test, license, username, link, email } = data;
   return `
   # ${data.title}
+
   ### ${data.projectDescription}
+
   ## License
   ${data.license}
+
   ## Table of contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribute](#contribute)
   * [Test](#installation)
+  * [Questions](#questions)
+
   ## Installation
   ${data.installation}
+
   ## Usage
   ${data.usage}
+
   ## Contribute
   ${data.contribute}
+
   ## Test
   ${data.test}
+
   ## Questions?
   * Username: ${data.username}
   * Repository: ${data.link}
   * Email: ${data.email}
 `;
+generateMarkdown(data);
 }
 
 module.exports = generateMarkdown;

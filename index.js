@@ -2,8 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { writeFile } = require('node:fs/promises');
-// const generateMarkdown = require("./src/generateMarkdown");
-const generateReadmeMarkdown = require("./src/generateMarkdown.js");
+const generateMarkdown = require("./src/generateMarkdown");
+// const generateReadmeMarkdown = require("./src/generateMarkdown.js");
 
 // *** TODO: Create an array of questions for user input
 const questions = [
@@ -109,19 +109,35 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((answers) => {
-  console.log(answers);
-  // writeFile(answers);
+  console.log("attempting to write file:");
+  writeToFile("./Pro-README.md", answers);
+}) 
+.catch((error) => {
+  if (error.isTypeError) {
+    throw new Error("TypeError" + error.message);
+  } else {
+    throw new Error(error);
+  }
 });
 
 
 // *** TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  writeFile('./Pro-README.md', JSON.stringify(data));
+  console.log(data);
+
+  fs.writeFile('./Pro-README.md', generateMarkdown(data), err => {
+    if (err) {
+      throw new Error(err);
+    }
+  });
 }
 
 // *** TODO: Create a function to initialize app
 function init() {
-  return generateReadmeMarkdown;
+  // inquire.prompt(questions)
+  // .then((generateReadmeMarkdown) => {
+  //   writeToFile("./Pro-README.md", JSON.stringify(generateReadmeMarkdown));
+  // })
 }
 
 
