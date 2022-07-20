@@ -3,7 +3,6 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const { writeFile } = require('node:fs/promises');
 const generateMarkdown = require("./src/generateMarkdown");
-// const generateReadmeMarkdown = require("./src/generateMarkdown.js");
 
 // *** TODO: Create an array of questions for user input
 const questions = [

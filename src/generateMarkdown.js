@@ -19,32 +19,32 @@ function generateMarkdown(data) {
 
   ### ${data.projectDescription}
 
-  ## License
+  ## Licenses:
   ${data.license}
 
-  ## Table of contents
+  ## Table of contents:
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribute](#contribute)
   * [Test](#installation)
   * [Questions](#questions)
 
-  ## Installation
-  ### To install use this command in the the terminal:
+  ## Installation:
+  ### *To install use this command in the the terminal:*
   ${data.installation}
 
-  ## Usage
+  ## Usage:
   ${data.usage}
 
-  ## Contribute
+  ## Contribute:
   ${data.contribute}
 
-  ## Test
-  ### To test use this command in the the terminal:
+  ## Test:
+  ### *To test use this command in the the terminal:*
   ${data.test}
 
   ## Questions?
-  ### If you have any questions here's how to contact me:
+  ### *If you have any questions here's how to contact me:*
   * Username: ${data.username}
   * Repository: ${data.link}
   * Email: ${data.email}
