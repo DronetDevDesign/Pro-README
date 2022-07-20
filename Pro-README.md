@@ -1,10 +1,10 @@
 
-  # WeatherBee
+  # ron
 
-  ### WeatherBee is a weather app that provides weather conditions when the user searches for a specific city. It also gives a five day forecast of the searched city.
+  ### ron
 
-  ## License
-  JavaScript,macOS,git
+  ## License:
+  MIT
 
   ## Table of contents
   * [Installation](#installation)
@@ -14,18 +14,21 @@
   * [Questions](#questions)
 
   ## Installation
-  npm init
+  ### To install use this command in the the terminal:
+  ron
 
   ## Usage
-  Knowledge of git and gitHub
+  ron
 
   ## Contribute
-  Contact me.
+  ron
 
   ## Test
-  node index.js
+  ### To test use this command in the the terminal:
+  ron
 
   ## Questions?
-  * Username: DronetDevDesign
-  * Repository: https://github.com/DronetDevDesign/weather-bee
-  * Email: ron@DronetDevDesign.com
+  ### If you have any questions here's how to contact me:
+  * Username: ron
+  * Repository: ron
+  * Email: ron

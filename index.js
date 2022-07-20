@@ -80,9 +80,8 @@ const questions = [
         "MIT", // https://img.shields.io/badge/license-MIT-brightgreen
         "Apache", // https://img.shields.io/badge/license-Apache-blue
         "GPL", // https://img.shields.io/badge/license-GPL-blue
-        "JavaScript", // https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg
-        "macOS", // https://svgshare.com/i/ZjP.svg
-        "git", // https://badgen.net/badge/icon/git?icon=git&label
+        "BSD", // https://img.shields.io/badge/license-BSD-blue
+        "none"
       ],
     },
     {
@@ -109,7 +108,6 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((answers) => {
-  console.log("attempting to write file:");
   writeToFile("./Pro-README.md", answers);
 }) 
 .catch((error) => {

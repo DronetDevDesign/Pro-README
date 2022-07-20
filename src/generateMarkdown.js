@@ -30,6 +30,7 @@ function generateMarkdown(data) {
   * [Questions](#questions)
 
   ## Installation
+  ### To install use this command in the the terminal:
   ${data.installation}
 
   ## Usage
@@ -39,9 +40,11 @@ function generateMarkdown(data) {
   ${data.contribute}
 
   ## Test
+  ### To test use this command in the the terminal:
   ${data.test}
 
   ## Questions?
+  ### If you have any questions here's how to contact me:
   * Username: ${data.username}
   * Repository: ${data.link}
   * Email: ${data.email}
