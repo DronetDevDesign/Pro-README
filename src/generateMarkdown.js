@@ -1,15 +1,32 @@
-const fs = require("fs");
 // *** TODO: Create a function that returns a license badge based on which license is passed in
 // *** If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let licenseBadge = "";
+  if (license === "MIT") {
+    licenseBadge = "[${license}](https://img.shields.io/badge/license-MIT-brightgreen)";
+  } else if (license === "Apache") {
+    licenseBadge = "[${license}](https://img.shields.io/badge/license-Apache-blue)";
+  } else if (license === "GPL") {
+    licenseBadge = "[${license}](https://img.shields.io/badge/license-Apache-blue)";
+  } else if (license === "BSD") {
+    licenseBadge = "[${license}](https://img.shields.io/badge/license-BSD-blue)";
+  } else {
+    licenseBadge = "";
+  }
+  return licenseBadge;
+}
 
 // *** TODO: Create a function that returns the license link
 // *** If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  // return `[${license}](https://img.shields.io/badge/license-MIT-brightgreen)`;
+}
 
 // *** TODO: Create a function that returns the license section of README
 // *** If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+}
 
 // *** TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -17,40 +34,40 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
+  ## **Project Description:**
   ### ${data.projectDescription}
 
-  ## **<span style="color:#D5BC82"> Licenses:</span>**
-  ${data.license}
+  ## **Licenses:**
+  ### ${renderLicenseBadge(data.license)}
 
-  ## **<span style="color:#D5BC82"> Table of contents:</span>**
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contribute](#contribute)
-  * [Test](#installation)
-  * [Questions](#questions)
+  ## **Table of contents:**
+  * ## [Installation](#installation)
+  * ## [Usage](#usage)
+  * ## [Contribute](#contribute)
+  * ## [Test](#installation)
+  * ## [Questions](#questions)
 
-  ## **<span style="color:#D5BC82"> Installation:</span>**
-  ### *<span style="color:#BEBEBE">To install use this command in the the terminal:</span>*
-  ${data.installation}
+  ## **Installation:**
+  ### *To install use this command in the the terminal:*
+  ### ${data.installation}
 
-  ## **<span style="color:#D5BC82"> Usage:</span>**
-  ${data.usage}
+  ## **Usage:**
+  ### ${data.usage}
 
-  ## **<span style="color:#D5BC82"> Contribute:</span>**
-  ${data.contribute}
+  ## **Contribute:**
+  ### ${data.contribute}
 
-  ## **<span style="color:#D5BC82"> Test:</span>**
-  ### *<span style="color:#BEBEBE">To test use this command in the the terminal:</span>*
-  ${data.test}
+  ## **Test:**
+  ### *To test use this command in the the terminal:*
+  ### ${data.test}
 
-  ## **<span style="color:#D5BC82"> Questions?</span>**
-  ### *<span style="color:#BEBEBE">If you have any questions here's how to contact me:</span>*
+  ## **Questions?**
+  ### *If you have any questions here's how to contact me:*
   * Username: ${data.username}
   * Repository: ${data.link}
   * Email: ${data.email}
 `;
 generateMarkdown(data);
-
 }
 
 module.exports = generateMarkdown;
