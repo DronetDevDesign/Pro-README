@@ -76,10 +76,10 @@ const questions = [
       name: "license",
       message: "What type of license should your project have? (check all that apply)",
       choices: [
-        "MIT", // https://img.shields.io/badge/license-MIT-brightgreen
-        "Apache", // https://img.shields.io/badge/license-Apache-blue
-        "GPL", // https://img.shields.io/badge/license-GPL-blue
-        "BSD", // https://img.shields.io/badge/license-BSD-blue
+        "MIT",
+        "Apache",
+        "GPL",
+        "BSD",
         "none"
       ],
     },
@@ -105,19 +105,6 @@ const questions = [
     }
   ];
 
-inquirer.prompt(questions)
-.then((answers) => {
-  writeToFile("./Pro-README.md", answers);
-}) 
-.catch((error) => {
-  if (error.isTypeError) {
-    throw new Error("TypeError" + error.message);
-  } else {
-    throw new Error(error);
-  }
-});
-
-
 // *** TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   console.log(data);
@@ -131,12 +118,18 @@ function writeToFile(fileName, data) {
 
 // *** TODO: Create a function to initialize app
 function init() {
-  // inquire.prompt(questions)
-  // .then((generateReadmeMarkdown) => {
-  //   writeToFile("./Pro-README.md", JSON.stringify(generateReadmeMarkdown));
-  // })
+  inquirer.prompt(questions)
+  .then((answers) => {
+  writeToFile("./Pro-README.md", answers);
+  }) 
+  .catch((error) => {
+  if (error.isTypeError) {
+    throw new Error("TypeError" + error.message);
+  } else {
+    throw new Error(error);
+  }
+  });
 }
-
 
 // *** Function call to initialize app
 init();
