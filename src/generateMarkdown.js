@@ -19,37 +19,38 @@ function generateMarkdown(data) {
 
   ### ${data.projectDescription}
 
-  ## Licenses:
+  ## **<span style="color:#D5BC82"> Licenses:</span>**
   ${data.license}
 
-  ## Table of contents:
+  ## **<span style="color:#D5BC82"> Table of contents:</span>**
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contribute](#contribute)
   * [Test](#installation)
   * [Questions](#questions)
 
-  ## Installation:
-  ### *To install use this command in the the terminal:*
+  ## **<span style="color:#D5BC82"> Installation:</span>**
+  ### *<span style="color:#BEBEBE">To install use this command in the the terminal:</span>*
   ${data.installation}
 
-  ## Usage:
+  ## **<span style="color:#D5BC82"> Usage:</span>**
   ${data.usage}
 
-  ## Contribute:
+  ## **<span style="color:#D5BC82"> Contribute:</span>**
   ${data.contribute}
 
-  ## Test:
-  ### *To test use this command in the the terminal:*
+  ## **<span style="color:#D5BC82"> Test:</span>**
+  ### *<span style="color:#BEBEBE">To test use this command in the the terminal:</span>*
   ${data.test}
 
-  ## Questions?
-  ### *If you have any questions here's how to contact me:*
+  ## **<span style="color:#D5BC82"> Questions?</span>**
+  ### *<span style="color:#BEBEBE">If you have any questions here's how to contact me:</span>*
   * Username: ${data.username}
   * Repository: ${data.link}
   * Email: ${data.email}
 `;
 generateMarkdown(data);
+
 }
 
 module.exports = generateMarkdown;
