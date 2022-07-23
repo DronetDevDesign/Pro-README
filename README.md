@@ -7,9 +7,9 @@
 
   ## **Table of contents:**
   * [Installation](#installation)
+  * [Test](#test)
   * [Usage](#usage)
   * [Contribute](#contribute)
-  * [Test](#test)
   * [Questions](#questions)
 
   <br>
