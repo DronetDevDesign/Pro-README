@@ -1,7 +1,7 @@
   # Pro-README
 
   ## **Project Description:**
-  ### Pro-READEME is a README.md generator created using strictly JavaScript, NPM, Inquirer and the command line. The user is asked a series of questions in the command line then once completed, a README.md file is created and placed the root folder. Click the link below to watch the command line demo.
+  ### Pro-READEME is a README.md generator created using strictly JavaScript, NPM, Inquirer and the command line. The user is asked a series of questions in the command line then once completed a README.md file is created and placed in the root folder. Click the link below to watch the command line demo.
 
   ## **Video Demo Link:**
 
