@@ -62,15 +62,15 @@ function generateMarkdown(data) {
   ### *<span style="color:#388dfc">To install use this command in the the terminal:</span>*
   ### ${data.installation}
 
+  ## **Test:**
+  ### *<span style="color:#388dfc">To test use this command in the the terminal:</span>*
+  ### ${data.test}
+
   ## **Usage:**
   ### ${data.usage}
 
   ## **Contribute:**
   ### ${data.contribute}
-
-  ## **Test:**
-  ### *<span style="color:#388dfc">To test use this command in the the terminal:</span>*
-  ### ${data.test}
 
   ## **Questions?**
   ### *<span style="color:#388dfc">If you have any questions here's how to contact me:</span>*
