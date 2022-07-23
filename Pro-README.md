@@ -1,10 +1,10 @@
+
   # Pro-README
+  
+  ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
 
   ## **Project Description:**
-  ### Pro-READEME is a README.md generator created using strictly JavaScript, NPM, Inquirer and the command line. The user is asked a series of questions in the command line then once completed a README.md file is created and placed in the root folder. Click the link below to watch the command line demo.
-
-  ## **Video Demo Link:**
-  https://watch.screencastify.com/v/0hYPE92GGYsBMQ2ZeZ8e
+  ### Pro-READEME is a README.md generator created using strictly JavaScript, NPM, Inquirer and the command line. The user is asked a series of questions in the command line then once completed, a README.md file is created and placed the root folder.
 
   ## **Table of contents:**
   * [Installation](#installation)
@@ -12,12 +12,16 @@
   * [Usage](#usage)
   * [Contribute](#contribute)
   * [Questions](#questions)
+ 
+  ## **Licenses:**
+  
+ 
+  This application is covered under the MIT license.
 
-  <br>
-    <div align="left">
-      <img src="./images/pro-readme-screenshot.jpg" width="800px" /> 
-    </div>
-  <br>
+  [MIT](https://img.shields.io/badge/license-MIT-brightgreen)
+
+ ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
+ 
 
   ## **Installation:**
   ### *<span style="color:#388dfc">To install use this command in the the terminal:</span>*
